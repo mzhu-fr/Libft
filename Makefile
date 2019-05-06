@@ -6,7 +6,7 @@
 #    By: mzhu <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/22 15:41:11 by mzhu              #+#    #+#              #
-#    Updated: 2019/05/01 04:56:38 by mzhu             ###   ########.fr        #
+#    Updated: 2019/05/06 22:22:12 by mzhu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,13 @@ SRC						=	ft_memset.c \
 							ft_itoa.c \
 							ft_strsplit.c \
 							ft_strcdup.c \
-							ft_swap.c 
+							ft_swap.c \
+							ft_lstmap.c \
+							ft_lstdelone.c \
+							ft_lstdel.c \
+							ft_lstnew.c \
+							ft_lstiter.c \
+							ft_lstadd.c
 
 OBJECT					=	$(SRC:.c=.o)
 
@@ -78,6 +84,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECT)
 	ar rc $(NAME) $(OBJECT)
+	ranlib $(NAME)
 
 %.o: %.c
 	gcc $(FLAGS) -o $@ -c $<
@@ -89,3 +96,6 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
+
+.PHONY: all, clean, fclean, re
+
