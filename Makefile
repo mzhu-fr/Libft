@@ -6,7 +6,7 @@
 #    By: mzhu <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/22 15:41:11 by mzhu              #+#    #+#              #
-#    Updated: 2019/05/06 22:22:12 by mzhu             ###   ########.fr        #
+#    Updated: 2019/05/07 19:20:27 by mzhu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,6 @@ all: $(NAME)
 
 $(NAME): $(OBJECT)
 	ar rc $(NAME) $(OBJECT)
-	ranlib $(NAME)
 
 %.o: %.c
 	gcc $(FLAGS) -o $@ -c $<
@@ -96,6 +95,3 @@ fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
-
-.PHONY: all, clean, fclean, re
-
