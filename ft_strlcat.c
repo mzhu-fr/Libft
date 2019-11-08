@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 21:39:37 by mzhu              #+#    #+#             */
-/*   Updated: 2019/04/28 20:38:49 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:31:49 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t		ft_strlcat(char *dest, const char *src, size_t size)

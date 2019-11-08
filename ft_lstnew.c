@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 19:20:29 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/06 22:03:39 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:35:20 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list		*ft_lstnew(void const *content, size_t content_size)

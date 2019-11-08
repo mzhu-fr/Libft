@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 21:33:10 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/01 03:43:16 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:36:45 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static	int			ft_count_word(char const *s, char c)

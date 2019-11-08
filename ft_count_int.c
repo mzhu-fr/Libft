@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int			ft_count_int(int nb)
+size_t		ft_count_int(long nb)
 {
 	long		n;
 	size_t		count;
@@ -23,11 +23,6 @@ int			ft_count_int(int nb)
 	{
 		count++;
 		n = n * -1;
-	}
-	if (n < 10)
-	{
-		count++;
-		return (count);
 	}
 	while (n > 0)
 	{

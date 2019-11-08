@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 20:58:47 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/06 21:13:19 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:35:05 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void		ft_lstadd(t_list **alst, t_list *new)

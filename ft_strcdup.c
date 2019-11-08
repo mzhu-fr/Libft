@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/30 21:34:15 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/01 02:27:13 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:33:51 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char		*ft_strcdup(const char *str, char c)

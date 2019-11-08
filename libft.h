@@ -6,7 +6,7 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 15:24:14 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/07 19:13:35 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:37:05 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct	s_list
 {
@@ -21,20 +23,26 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
 void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
-char			*ft_strcdup(const char *str, char c);
+size_t			ft_count_int(long nb);
+
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strdup(const char *str);
+char			*ft_strcdup(const char *str, char c);
+char			*ft_strndup(const char *str, size_t n);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_strcat(char *dest, const char *src);
@@ -45,7 +53,7 @@ char			*ft_strstr(const char *str, const char *lf);
 char			*ft_strnstr(const char *str, const char *lf, size_t len);
 char			*ft_strtrim(char const *s);
 char			*ft_itoa(int n);
-int				ft_count_int(int nb);
+
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *nptr);
@@ -59,6 +67,7 @@ int				ft_tolower(int c);
 int				ft_strequ(char const *s1, char const *s2);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
+
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putstr_fd(char const *s1, int fd);
 void			ft_putchar_fd(char c, int fd);
@@ -82,5 +91,6 @@ void			ft_strclr(char *s);
 void			ft_striter(char *s, void(*f)(char *));
 void			ft_striteri(char *s, void(*f)(unsigned int, char *));
 void			ft_swap(int *a, int *b);
+void			*ft_strjoin_free(char const *s1, char const *s2);
 
 #endif

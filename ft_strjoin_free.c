@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 01:10:11 by mzhu              #+#    #+#             */
-/*   Updated: 2019/11/07 04:31:39 by mzhu             ###   ########.fr       */
+/*   Created: 2019/10/27 16:20:22 by mzhu              #+#    #+#             */
+/*   Updated: 2019/10/27 16:25:32 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_strjoin(char const *s1, char const *s2)
+void		*ft_strjoin_free(char const *s1, char const *s2)
 {
-	char		*cat;
-	size_t		i;
-	size_t		j;
+	size_t				i;
+	size_t				j;
+	unsigned char		*free_s1;
+	unsigned char		*free_s2;
+	char				*cat;
 
-	i = 0;
-	j = 0;
+	i = -1;
+	j = -1;
+	free_s1 = (unsigned char*)s1;
+	free_s2 = (unsigned char*)s2;
 	if (!s1 || !s2)
 		return (NULL);
 	if (!(cat = (char*)malloc(sizeof(char)
-						* (ft_strlen(s1) + ft_strlen(s2)) + 1)))
+					* (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
-	while (s1[i])
-	{
+	while (s1[++i])
 		cat[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-	{
+	while (s2[++j])
 		cat[i + j] = s2[j];
-		j++;
-	}
 	cat[i + j] = '\0';
+	free(free_s1);
+	free(free_s2);
 	return (cat);
 }

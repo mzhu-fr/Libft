@@ -6,11 +6,10 @@
 /*   By: mzhu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/29 19:53:25 by mzhu              #+#    #+#             */
-/*   Updated: 2019/05/01 03:42:47 by mzhu             ###   ########.fr       */
+/*   Updated: 2019/11/07 04:34:54 by mzhu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static	void		ft_fillitoa(int nbr, char *str, size_t index)
